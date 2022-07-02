@@ -18,23 +18,23 @@
 
     <div class="container" id="app">
 
-        <h1>个人作品</h1>
+        <h1>谢成龙的个人作品</h1>
         <div class="row">
 
             <div class="col-md-3">
-                <p>垂直的胶囊式导航菜单</p>
+                <h4 style="color: #888">点击导航栏查看详情</h4>
                 <ul class="nav nav-pills nav-stacked nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#lele">乐乐心灵氧吧</a></li>
-                    <li><a data-toggle="tab" href="#aviator">王牌飞行员</a></li>
+                    <li class="active"><a data-toggle="tab" href="#4scar">4S店后台管理系统</a></li>
+                    <li><a data-toggle="tab" href="#lele">乐乐心灵氧吧</a></li>
                     <li><a data-toggle="tab" href="#yan">燕归巢</a></li>
+                    <li><a data-toggle="tab" href="#rent_car">租车平台管理系统</a></li>
+                    <li><a data-toggle="tab" href="#aviator">王牌飞行员</a></li>
                     <li><a data-toggle="tab" href="#fly">Fly Bird</a></li>
-                    <li><a data-toggle="tab" href="#">Java</a></li>
-                    <li><a data-toggle="tab" href="#">PHP</a></li>
                 </ul>
             </div>
 
             <div class="tab-content">
-                <div id="lele" class="col-md-9 tab-pane fade in active">
+                <div id="lele" class="col-md-9 tab-pane fade">
                     <a href="https://xie-925.gitee.io/le-le/" target="_blank">
                         <h3>项目名称：乐乐心灵氧吧</h3>
                         <p>本项目是一个前端项目，使用HTML5，css3，JavaScript开发。是大一自学前端时做的项目，项目已经申请了大学生创新创新训练计划，并成功结题。 </p>
@@ -172,7 +172,7 @@
                         <!-- 轮播（Carousel）项目 -->
                         <div class="carousel-inner">
                             <div class="item active ">
-                                <img src="https://s6.jpg.cm/2022/07/02/PqDXfR.jpg" alt="关卡1界面">
+                                <img src="https://s6.jpg.cm/2022/07/02/PqDsfE.png" alt="关卡1界面">
                                 <div class="carousel-caption">移动端界面</div>
                             </div>
                             <div class="item" v-for="(i,index) in flyimg">
@@ -192,7 +192,89 @@
                     </div>
                 </div>
 
+                <div id="rent_car" class="col-md-9 tab-pane fade">
+                    <a href="http://49.232.214.165:8080/" target="_blank">
+                        <h3>项目名称：租车平台管理系统</h3>
+                        <p>这个是学完SSM框架之后自己独立做的案例系统。<u>登录账号：Admin 密码：000000</u></p>
 
+                        <h3>作品描述：</h3>
+                        <p>系统主要包括员工管理，部门 管理，门店/商铺首页管理，预约业务管理，
+                            消费业务管理，权限管理，报表统计，服务管理，业务明细管理，财务管理等模块。
+                            集成第三方插件 Shiro 来进行登录认证，以及控制员工的角色和权限；
+                            使用 Echarts 来做数据报表的柱状折线图和饼状图。</p>
+                    </a>
+
+                    <h3>作品演示图</h3>
+                    <div id="myCarouse5" class="carousel slide">
+                        <!-- 轮播（Carousel）指标 -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarouse5" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarouse5" v-for="(i,index) in 7" data-slide-to="index+1"></li>
+                        </ol>
+                        <!-- 轮播（Carousel）项目 -->
+                        <div class="carousel-inner">
+                            <div class="item active ">
+                                <img src="https://s6.jpg.cm/2022/07/02/PqD3X8.png" alt="登录页">
+                                <div class="carousel-caption">登录页</div>
+                            </div>
+                            <div class="item" v-for="(i,index) in rentcarimg">
+                                <img :src="i.src" :alt="i.text">
+                                <div class="carousel-caption">{{i.text}}</div>
+                            </div>
+                        </div>
+                        <!-- 轮播（Carousel）导航 -->
+                        <a class="left carousel-control" href="#myCarouse5" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarouse5" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="4scar" class="col-md-9 tab-pane fade in active">
+                    <a href="http://47.94.7.215:8080" target="_blank">
+                        <h3>项目名称：4S店后台管理系统</h3>
+                        <p>这个是学完SSM框架之后自己独立做的案例系统。<u>登录账号：Admin 密码：1</u></p>
+
+                        <h3>作品描述：</h3>
+                        <p>系统主要包括员工管理，部门 管理，门店/商铺首页管理，预约业务管理，
+                            消费业务管理，权限管理，报表统计，服务管理，业务明细管理，财务管理等模块。
+                            集成第三方插件 Shiro 来进行登录认证，以及控制员工的角色和权限；
+                            使用 Echarts 来做数据报表的柱状折线图和饼状图。</p>
+                    </a>
+
+                    <h3>作品演示图</h3>
+                    <div id="myCarouse6" class="carousel slide">
+                        <!-- 轮播（Carousel）指标 -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarouse6" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarouse6" v-for="(i,index) in 7" data-slide-to="index+1"></li>
+                        </ol>
+                        <!-- 轮播（Carousel）项目 -->
+                        <div class="carousel-inner">
+                            <div class="item active ">
+                                <img src="https://s6.jpg.cm/2022/07/02/PqMYEe.png" alt="柱状图">
+                                <div class="carousel-caption">柱状图</div>
+                            </div>
+                            <div class="item" v-for="(i,index) in scarimg">
+                                <img :src="i.src" :alt="i.text">
+                                <div class="carousel-caption">{{i.text}}</div>
+                            </div>
+                        </div>
+                        <!-- 轮播（Carousel）导航 -->
+                        <a class="left carousel-control" href="#myCarouse6" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarouse6" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
 
             </div>
 
@@ -202,16 +284,6 @@
     </div>
 </body>
 <script>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -303,16 +375,74 @@
             ],
             flyimg: [
                 {
-                    src: "https://s6.jpg.cm/2022/07/02/PqD8RC.jpg",
+                    src: "https://s6.jpg.cm/2022/07/02/PqDr1T.png",
                     text: "游戏结束"
                 },
                 {
-                    src: "https://s6.jpg.cm/2022/07/02/PqDA1t.jpg",
+                    src: "https://s6.jpg.cm/2022/07/02/PqDEZQ.png",
                     text: "游戏中"
                 }
-            ]
-
-
+            ],
+            rentcarimg: [
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqDzfO.png",
+                    text: "游戏结束"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqDzfO.png",
+                    text: ""
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqDfqf.png",
+                    text: ""
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqDgHU.png",
+                    text: ""
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqD0Zw.png",
+                    text: ""
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqDCpi.png",
+                    text: ""
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqDKak.png",
+                    text: ""
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqDjee.png",
+                    text: ""
+                },
+            ],
+            scarimg: [
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqMFt5.png",
+                    text: ""
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqMrhy.png",
+                    text: ""
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqMEnr.png",
+                    text: ""
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqMSlk.png",
+                    text: ""
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqMkzC.png",
+                    text: ""
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqMpIt.png",
+                    text: ""
+                }
+            ],
         }
     })
 </script>
