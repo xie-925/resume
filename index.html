@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>谢成龙的个人简历</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pikaz-excel-js"></script>
+    <script src="js/vue.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container" id="app">
+
+        <h1>个人作品</h1>
+        <div class="row">
+
+            <div class="col-md-3">
+                <p>垂直的胶囊式导航菜单</p>
+                <ul class="nav nav-pills nav-stacked nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#lele">乐乐心灵氧吧</a></li>
+                    <li><a data-toggle="tab" href="#aviator">王牌飞行员</a></li>
+                    <li><a data-toggle="tab" href="#yan">燕归巢</a></li>
+                    <li><a data-toggle="tab" href="#fly">Fly Bird</a></li>
+                    <li><a data-toggle="tab" href="#">Java</a></li>
+                    <li><a data-toggle="tab" href="#">PHP</a></li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <div id="lele" class="col-md-9 tab-pane fade in active">
+                    <a href="https://xie-925.gitee.io/le-le/" target="_blank">
+                        <h3>项目名称：乐乐心灵氧吧</h3>
+                        <p>本项目是一个前端项目，使用HTML5，css3，JavaScript开发。是大一自学前端时做的项目，项目已经申请了大学生创新创新训练计划，并成功结题。 </p>
+                        <h3>作品描述：</h3>
+                        <p>随着生活节奏的不断加快及互联网技术的不断发展，人们的压力也不断增加，导致产生一些心理疾病。心里咨询，是一种有效地预防与治疗心理疾病的手段。但是，目前的心理咨询方式相对单调乏味，许多存在心理问题的人们不愿进行咨询。本项目以更好地服务社会中存在心理问题的人民群众为主题，意在帮助更多的患者走出心理疾病，从而达到健康生活的目的，网站主要包括心理测试，心理咨询，心灵电台，减压游戏，开心一刻五个主要功能。
+                        </p>
+                    </a>
+
+                    <h3>作品演示图</h3>
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- 轮播（Carousel）指标 -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" v-for="(i,index) in 8" data-slide-to="index+1"></li>
+                        </ol>
+                        <!-- 轮播（Carousel）项目 -->
+                        <div class="carousel-inner">
+                            <div class="item active ">
+                                <img src="https://s6.jpg.cm/2022/07/02/PqTPx2.png" alt="Second slide">
+                                <div class="carousel-caption">网站首页</div>
+                            </div>
+                            <div class="item" v-for="(i,index) in leleimg">
+                                <img :src="i.src" :alt="i.text">
+                                <div class="carousel-caption">{{i.text}}</div>
+                            </div>
+                        </div>
+                        <!-- 轮播（Carousel）导航 -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="aviator" class="col-md-9 tab-pane fade">
+                    <h3>项目名称：王牌飞行员</h3>
+                    <h3>作品描述</h3>
+                    <p>
+                        这个是大一初学JavaScript时做的第一款小游戏，主要使用了js中的定时器，并提供了多种可玩性。
+                    </p>
+                    <h3>作品演示图</h3>
+                    <div id="myCarouse2" class="carousel slide">
+                        <!-- 轮播（Carousel）指标 -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarouse2" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarouse2" v-for="(i,index) in 3" data-slide-to="index+1"></li>
+                        </ol>
+                        <!-- 轮播（Carousel）项目 -->
+                        <div class="carousel-inner">
+                            <div class="item active ">
+                                <img src="https://s6.jpg.cm/2022/07/02/PqaOXS.png" alt="游戏界面">
+                                <div class="carousel-caption">游戏界面</div>
+                            </div>
+                            <div class="item" v-for="(i,index) in aviatorimg">
+                                <img :src="i.src" :alt="i.text">
+                                <div class="carousel-caption">{{i.text}}</div>
+                            </div>
+                        </div>
+                        <!-- 轮播（Carousel）导航 -->
+                        <a class="left carousel-control" href="#myCarouse2" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarouse2" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div id="yan" class="col-md-9 tab-pane fade">
+                    <a href="https://xie-925.gitee.io/yan-homing/" target="_blank">
+                        <h3>项目名称：燕归巢</h3>
+                        <p>
+                            本项目是参加中国计算机设计大赛的参赛作品，参赛主题是“鸟与人类”,作品最终获得国家级三等奖。
+                        </p>
+                        <h3>作品描述：</h3>
+                        <p>作品是游戏设计，采用了网页前端的游戏展示方法，游戏主要使用的编程语言是JavaScript，还配合一些简单的HTML和
+                            css语言，游戏一共有3关，分别设计了3个游戏（页面），最后将游戏整合到一起。游戏第一关的内容是打跑猎人，通过
+                            鼠标的点击抓住猎人，如果漏掉超过3个则游戏失败；第二关的内容是小鸟逃跑，通过鼠标或键盘的操作使小鸟上下移动，来
+                            躲避飞行途中的竹子；第三关的内容是小鸟逃离山崖，通过键盘的上下左右键移动小鸟，躲避上方随机飞来的石头。最后即可
+                            通关。</p>
+                    </a>
+
+                    <h3>作品演示图</h3>
+                    <div id="myCarouse3" class="carousel slide">
+                        <!-- 轮播（Carousel）指标 -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarouse3" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarouse3" v-for="(i,index) in 8" data-slide-to="index+1"></li>
+                        </ol>
+                        <!-- 轮播（Carousel）项目 -->
+                        <div class="carousel-inner">
+                            <div class="item active ">
+                                <img src="https://s6.jpg.cm/2022/07/02/Pqayrp.png" alt="关卡1界面">
+                                <div class="carousel-caption">关卡1界面</div>
+                            </div>
+                            <div class="item" v-for="(i,index) in yanimg">
+                                <img :src="i.src" :alt="i.text">
+                                <div class="carousel-caption">{{i.text}}</div>
+                            </div>
+                        </div>
+                        <!-- 轮播（Carousel）导航 -->
+                        <a class="left carousel-control" href="#myCarouse3" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarouse3" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="fly" class="col-md-9 tab-pane fade">
+                    <a href="http://xie-925.gitee.io/fly_bird/" target="_blank">
+                        <h3>项目名称：Fly Bird</h3>
+
+                        <h3>作品描述：</h3>
+                        <p>这个是从“燕归巢”中第二关独立出来的移动端游戏项目，为了能在手机上也可以玩，并且对手机端的操作做了很多适配以及界面优化。</p>
+                    </a>
+
+                    <h3>作品演示图</h3>
+                    <div id="myCarouse4" class="carousel slide">
+                        <!-- 轮播（Carousel）指标 -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarouse4" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarouse4" v-for="(i,index) in 2" data-slide-to="index+1"></li>
+                        </ol>
+                        <!-- 轮播（Carousel）项目 -->
+                        <div class="carousel-inner">
+                            <div class="item active ">
+                                <img src="https://s6.jpg.cm/2022/07/02/PqDXfR.jpg" alt="关卡1界面">
+                                <div class="carousel-caption">移动端界面</div>
+                            </div>
+                            <div class="item" v-for="(i,index) in flyimg">
+                                <img :src="i.src" :alt="i.text">
+                                <div class="carousel-caption">{{i.text}}</div>
+                            </div>
+                        </div>
+                        <!-- 轮播（Carousel）导航 -->
+                        <a class="left carousel-control" href="#myCarouse4" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarouse4" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+<script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var vue = new Vue({
+        el: "#app",
+        data: {
+            leleimg: [
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqTq6H.png",
+                    text: "网站首页"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqTGIh.png",
+                    text: "心理测评"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqTIUS.png",
+                    text: "心理百科"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqTLoW.png",
+                    text: "开心一刻"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqTWFL.png",
+                    text: "减压游戏"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqTnjf.png",
+                    text: "用户中心"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqT75U.png",
+                    text: "联系我们"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqTQtO.png",
+                    text: "底部导航栏"
+                }
+            ],
+            yanimg: [
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/Pqa9K6.png",
+                    text: "游戏首页"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqajdD.png",
+                    text: "关卡1游戏中"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqaCp4.png",
+                    text: "游戏失败"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqaKaX.png",
+                    text: "关卡2界面"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqaaqT.png",
+                    text: "关卡2游戏中"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqaiHE.png",
+                    text: "关卡3界面"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqaDZh.png",
+                    text: "关卡3游戏中"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqaxgQ.png",
+                    text: "游戏结束 通关"
+                }
+            ],
+            aviatorimg: [
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqaZvW.png",
+                    text: "游戏界面"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqiGa2.png",
+                    text: "游戏界面"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqiLeH.png",
+                    text: "游戏界面"
+                }
+            ],
+            flyimg: [
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqD8RC.jpg",
+                    text: "游戏结束"
+                },
+                {
+                    src: "https://s6.jpg.cm/2022/07/02/PqDA1t.jpg",
+                    text: "游戏中"
+                }
+            ]
+
+
+        }
+    })
+</script>
+
+
+</html>
